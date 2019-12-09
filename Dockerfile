@@ -1,4 +1,4 @@
-FROM node:12.13.1
+FROM node:12.13.1-slim
 
 # add oracle instantclient binaries
 ADD ./oracle/linux/*.zip ./
@@ -8,6 +8,9 @@ ENV OCI_HOME="/opt/oracle/instantclient"
 ENV OCI_LIB_DIR="/opt/oracle/instantclient"
 ENV OCI_INCLUDE_DIR="/opt/oracle/instantclient/sdk/include"
 ENV OCI_VERSION=12
+
+ENV http_proxy "http://10.15.6.140:3126/"
+ENV https_proxy "http://10.15.6.140:3126/"
 
 # install dependencies and extract binaries`
 RUN apt-get update \

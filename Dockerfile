@@ -9,8 +9,8 @@ ENV OCI_LIB_DIR="/opt/oracle/instantclient"
 ENV OCI_INCLUDE_DIR="/opt/oracle/instantclient/sdk/include"
 ENV OCI_VERSION=12
 
-ENV http_proxy "http://10.15.6.140:3126/"
-ENV https_proxy "http://10.15.6.140:3126/"
+#ENV http_proxy "http://[host_name]:[port]/"
+#ENV https_proxy "http://[host_name]:[port]/"
 
 # install dependencies and extract binaries`
 RUN apt-get update \
